@@ -15,8 +15,18 @@ var startBtn = document.getElementById("startBtn");
     var high_scores= [];
     var output="";
 
+    //
     var score = 0;
 
     let i = 0;
+
+    //Questions
+
+    question:
+    imageSrc: ""
+    answerChoice: ["A) Strings", "B) Booleans", "C) Alerts", "D) Numbers"],
+    correctAnswer; "option2"
+
+
 
     
