@@ -6,19 +6,21 @@
   
   header {
     font-weight: bold;
+    color: blue;
     display: flex;
     justify-content: space-between;
   }
   
   body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Agdasima', sans-serif;
       text-align: center;
+      
     }
   
   #scoreDisplay {
     float: left;
-    color: darkcyan;
+    color: rgb(61, 9, 130);
   }
   
   #scoreDisplay:hover {
