@@ -23,33 +23,33 @@ var startBtn = document.getElementById("startBtn");
     //Questions
     var questionArray = [
 {
-    question: "Question: What is the HTML tag under which you can write the JavaScript code?",
+    question: "Question: Commonly used data types DO NOT INCLUDE:",
     imageSrc: "",
-    answerChoice: ["A) <javascript>", "B) <scripted>", "C) <script>", "D) <js>"],
+    answerChoice: ["A) <Strings>", "B) <Monkey Poo>", "C) <Alerts>", "D) <Bat Signals>"],
     correctAnswer: 2
 }, 
 {
-    question: "Question: What are variables used for in JavaScript Programs?",
+    question: "Question: The condition in an if / else statement is enclosed within ________?",
     imageSrc: "",
-    answerChoice: ["A) Storing numbers, dates, or other values", "B) Varying randomly", "D) Causing high-school algebra flashbacks", "D) None of the above"],
-    correctAnswer: 0
+    answerChoice: ["A) Flowers", "B) Cement", "D) Parenthesis", "D) These 4 Walls"],
+    correctAnswer: 2
 },
 {
-    question: "Question: Which method adds a new item to the end of an array and returns the new length?",
+    question: "Question: Arrays in JavaScript can be used to store __________?",
     imageSrc: "",
-    answerChoice: ["A) shift()", "B) return() ", "C) push() ", "D) pop()"],
-    correctAnswer: 2
+    answerChoice: ["A) Numbers and Strings", "B) Other Arrays", "C) Booleans", "D) All of the Above"],
+    correctAnswer: 3
 }, 
 {
-    question: "Question: Which of the following can't be done with client-side JavaScript?",
+    question: "Question: String values must be enclosed within ________ when being assigned to variables.",
     imageSrc: "",
-    answerChoice: ["A) Sending a form's contents by email", "B) Validating a form", "C) Storing the form's contents to a database file on the server", "D) None of the above"],
+    answerChoice: ["A) A ball of yarn", "B) My Shoe", "C) Quotes", "D) Spider Man's web shooter"],
     correctAnswer: 2
 },
 {
-    question: "Question: Which of the following are capabilities of functions in JavaScript?",
-    answerChoice: ["A) Return a value", "B) Accept parameters", "C) Accept parameters and Return a value", "D) All of the above"],
-    correctAnswer: 1
+    question: "Question: What team is the BESt NFL team out there?",
+    answerChoice: ["A) KC Chiefs", "B) KC Chiefs", "C) KC CHIEFS", "D) All of the above"],
+    correctAnswer: 3
 }];
 
 //COUNTDOWN TIMER FUNCTION: set countdown timer and interval. Set time-related valiables.
