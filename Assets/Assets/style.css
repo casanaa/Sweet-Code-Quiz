@@ -1,29 +1,26 @@
     h1 { 
-    font-family: 'Caprasimo', cursive; 
-  max-width: 100%;}
+    font-family: 'Caprasimo', cursive;
+    font-size: 500%; 
+   max-width: 100%;}
     
-  
-
-  .fancy-text {
-font-family: 'Dancing Script', cursive;
+    .fancy-text {
+    font-family: 'Indie Flower', cursive;
     font-size: xx-large;
-  }
+    }
   
   
-  header {
+   header {
     font-weight: bold;
     color: blue;
     display: flex;
     justify-content: space-between;
-  }
+   }
   
-  body {
+   body {
       margin: 0;
       text-align: center;
       background-color: rgb(234, 8, 8);
-
-      
-    }
+     }
   
   #scoreDisplay {
     float: left;
@@ -53,6 +50,7 @@ font-family: 'Dancing Script', cursive;
       border-radius: 15px;
       height: 50px;
       font-size: larger;
+      
   }
   
   .container {
