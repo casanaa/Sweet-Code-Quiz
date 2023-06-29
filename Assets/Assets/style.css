@@ -1,14 +1,12 @@
     h1 { 
-    font-family: 'Caprasimo', cursive;} 
-
-    max-width: 100%;
+    font-family: 'Caprasimo', cursive; 
+  max-width: 100%;}
     
-  .Indie-FLower {
-    font-family: 'Indie Flower', cursive;
-  }
+  
 
   .fancy-text {
 font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
   }
   
   
