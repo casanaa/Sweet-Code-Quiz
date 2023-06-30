@@ -30,7 +30,5 @@ THEN I can save my initials and my score
 Live page: https://casanaa.github.io/Sweet-Code-Quiz/ 
 
 
-![Screen Shot](https://github.com/casanaa/Sweet-Code-Quiz/assets/133182324/8ea84e43-aeba-448a-8b32-581b4d275251)
 
-
-![Uploading Screen Shot.png…]()
+C:\Users\anton\Desktop\bootcamp\Sweet Code Quiz\Assets\Screen Shot.png
