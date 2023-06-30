@@ -31,4 +31,4 @@ Live page: https://casanaa.github.io/Sweet-Code-Quiz/
 
 
 
-![](https://user-images.githubusercontent.com/133182324/250179387-475fafc3-8994-4536-903d-74ef357a2257.png)
+![Alt Image text](/C:\Users\anton\Desktop\bootcamp\Sweet Code Quiz\Assets\Screen Shot.png)
