@@ -29,3 +29,4 @@ THEN I can save my initials and my score
 Live page: https://casanaa.github.io/Sweet-Code-Quiz/ 
 
 
+https://github.com/casanaa/Sweet-Code-Quiz/issues/3#issue-1783055205 
