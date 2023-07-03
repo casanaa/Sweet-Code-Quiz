@@ -33,6 +33,6 @@ Live page: https://casanaa.github.io/Sweet-Code-Quiz/
 
 
 
-![image](https://github.com/casanaa/Sweet-Code-Quiz/assets/133182324/389d0b65-3eb3-4b0c-95c0-9d68b03560bf)
+C:\Users\anton\Sweet-Code-Quiz\Screen Shot.png 
 
 
