@@ -32,4 +32,5 @@ Live page: https://casanaa.github.io/Sweet-Code-Quiz/
 
 
 
-![Screen Shot](https://github.com/casanaa/Sweet-Code-Quiz/assets/133182324/0bbaf71a-8ecb-4da2-9138-cda1450fbc5c)
+![screencapture-casanaa-github-io-Sweet-Code-Quiz-2023-06-30-14_58_45](https://github.com/casanaa/Sweet-Code-Quiz/assets/133182324/710119ec-5c79-4dc9-8a8d-34348038cd7f)
+
