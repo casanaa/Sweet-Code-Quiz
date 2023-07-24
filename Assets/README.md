@@ -23,3 +23,8 @@ WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
+
+Deployed site: https://casanaa.github.io/Sweet-Code-Quiz/ 
+
+
+Assets/Screenshot Quiz 023-07-05 150616.png

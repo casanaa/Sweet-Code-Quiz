@@ -8,7 +8,8 @@ My attempt at creating a working code quiz.
 ```
 AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+SO THAT I can gauge my progress compared to my peers!
+
 ```
 
 ## Acceptance Criteria
@@ -27,5 +28,12 @@ WHEN the game is over
 THEN I can save my initials and my score
 
 Live page: https://casanaa.github.io/Sweet-Code-Quiz/ 
+
+
+![image](https://github.com/casanaa/Sweet-Code-Quiz/assets/133182324/c070036f-408b-4fbe-82fc-07886dc55fa0)
+
+
+
+
 
 
