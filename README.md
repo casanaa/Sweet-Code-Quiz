@@ -27,10 +27,12 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 
-Live page: https://casanaa.github.io/Sweet-Code-Quiz/ 
+Live page: https://casanaa.github.io/Sweet-Code-Quiz/
+
+ 
 
 
-![image](https://github.com/casanaa/Sweet-Code-Quiz/assets/133182324/c070036f-408b-4fbe-82fc-07886dc55fa0)
+
 
 
 
