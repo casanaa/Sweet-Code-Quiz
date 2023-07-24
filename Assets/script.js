@@ -1,63 +1,74 @@
-var startBtn = document.getElementById("startBtn");
-var time = 75;
-var time_remaining = true;
-var time_start= false;
-var countdownTimer = document.getElementById("countdownTimer");
-var homeContainer =  document.getElementById("homeContainer");
-var quizContainer = document.getElementById("quizContainer");
-var questionHeading = document.getElementById("questionHeading");
-var answerChoiceA = document.getElementById("answerChoiceA");
-var answerChoiceB = document.getElementById("answerChoiceB");
-var answerChoiceC = document.getElementById("answerChoiceC");
-var answerChoiceD = document.getElementById("answerChoiceD");
-var correctAnswer = document.getElementById("correctAnswer");    
-var high_scores= [];
-var output="";
 
-var score = 0;
-
-let i = 0;
-
-var questionArray = [
+    var questionArray = [
 {
     question: "Question: Commonly used data types DO NOT INCLUDE:",
-    imageSrc: "",
-    answerChoice: ["A) <Strings>", "B) <Monkey Poo>", "C) <Alerts>", "D) <Bat Signals>"],
-    correctAnswer: 2
+    answerChoice: ["Strings", "Monkey Poo", "Alerts", "Bat Signals"],
+    answer: 3
 }, 
 {
     question: "Question: The condition in an if / else statement is enclosed within ________?",
-    imageSrc: "",
-    answerChoice: ["A) Flowers", "B) Cement", "D) Parenthesis", "D) These 4 Walls"],
-    correctAnswer: 2
+    answerChoice: ["Flowers", "Cement", "Parenthesis", "These 4 Walls"],
+    answer: 3
 },
 {
     question: "Question: Arrays in JavaScript can be used to store __________?",
-    imageSrc: "",
-    answerChoice: ["A) Numbers and Strings", "B) Other Arrays", "C) Booleans", "D) All of the Above"],
-    correctAnswer: 3
+    answerChoice: ["Numbers and Strings", "Other Arrays", "Booleans", "All of the Above"],
+    answer: 4
 }, 
 {
     question: "Question: String values must be enclosed within ________ when being assigned to variables.",
-    imageSrc: "",
-    answerChoice: ["A) A ball of yarn", "B) My Shoe", "C) Quotes", "D) Spider Man's web shooter"],
-    correctAnswer: 2
+    answerChoice: ["A ball of yarn", "My Shoe", "Quotes", "Spider Man's web shooter"],
+    answer: 3
 },
 {
     question: "Question: What team is the BESt NFL team out there?",
-    answerChoice: ["A) KC Chiefs", "B) KC Chiefs", "C) KC CHIEFS", "D) All of the above"],
-    correctAnswer: 3
+    answerChoice: ["KC Chiefs", "KC Chiefs", "KC CHIEFS", "All of the above"],
+    answer: 4
 }];
 
-var countdownTimerInterval = setInterval(setCountdownTimer, 1000);  
+    var score = 0;
 
-function setCountdownTimer() {
-    if (time_start)
-    time--;
-    if(time<= 0) {
-    end_quiz();
-    time = 0;  
-    }
+    let i = 0;
+
+    var startBtn = document.getElementById("startBtn");
+
+    var time = 75;
+
+    var time_remaining = true;
+
+    var time_start= false;
+
+    var countdownTimer = document.getElementById("countdownTimer");
+
+    var homeContainer =  document.getElementById("homeContainer");
+
+    var quizContainer = document.getElementById("quizContainer");
+
+    var questionHeading = document.getElementById("questionHeading");
+
+    var answerChoiceA = document.getElementById("answerChoiceA");
+
+    var answerChoiceB = document.getElementById("answerChoiceB");
+
+    var answerChoiceC = document.getElementById("answerChoiceC");
+
+    var answerChoiceD = document.getElementById("answerChoiceD");
+
+    var correctAnswer = document.getElementById("correctAnswer");   
+
+    var high_scores= [];
+
+    var output="";
+
+    var countdownTimerInterval = setInterval(setCountdownTimer, 1000);  
+
+    function setCountdownTimer() {
+        if (time_start)
+        time--;
+        if(time<= 0) {
+        end_quiz();
+        time = 0;  
+        }
 
     document.getElementById("timer").innerHTML = time;}
 

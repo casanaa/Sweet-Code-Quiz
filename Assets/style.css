@@ -25,6 +25,7 @@
   #scoreDisplay {
     float: left;
     color: rgb(61, 9, 130);
+    font-size: 20px;
   }
   
   #scoreDisplay:hover {
@@ -44,12 +45,13 @@
   }
   
   button {
-      background-color: rgb(236, 245, 61);
-      color: rgb(247, 12, 12);
-      width: auto;
-      border-radius: 15px;
-      height: 50px;
-      font-size: larger;
+    display: inline-block;
+    background-color: rgb(231, 247, 56);
+    font-size: 20px;
+    padding: 9px 810px;
+    border: 4px solid;
+    border-radius: 10px;
+    transition-duration: 0.4s;
       
   }
   
