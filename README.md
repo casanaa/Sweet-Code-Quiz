@@ -29,7 +29,8 @@ THEN I can save my initials and my score
 
 Live page: https://casanaa.github.io/Sweet-Code-Quiz/
 
- 
+ screen shot: ![Screenshot 2023-07-24 015119](https://github.com/casanaa/Sweet-Code-Quiz/assets/133182324/76a057e1-07d4-4464-a110-36910936322d)
+
 
 
 
