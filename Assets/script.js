@@ -1,265 +1,79 @@
 
-    var questionArray = [
+    const questions = [
 {
-    question: "Question: Commonly used data types DO NOT INCLUDE:",
-    answerChoice: ["Strings", "Monkey Poo", "Alerts", "Bat Signals"],
-    answer: 3
+    question: "Commonly used data types DO NOT INCLUDE:",
+    choices: ["Strings", "Monkey Poo", "Alerts", "Bat Signals"],
+    correctAnswer: "Bat Signals"
 }, 
 {
-    question: "Question: The condition in an if / else statement is enclosed within ________?",
-    answerChoice: ["Flowers", "Cement", "Parenthesis", "These 4 Walls"],
-    answer: 3
+    question: "The condition in an if / else statement is enclosed within ________?",
+    choices: ["Flowers", "Cement", "Parenthesis", "These 4 Walls"],
+    correctAnswer: "Parenthesis"
 },
 {
-    question: "Question: Arrays in JavaScript can be used to store __________?",
-    answerChoice: ["Numbers and Strings", "Other Arrays", "Booleans", "All of the Above"],
-    answer: 4
+    question: "Arrays in JavaScript can be used to store __________?",
+    choices: ["Numbers and Strings", "Other Arrays", "Booleans", "All of the above"],
+    correctAnswer: "All of the above"
 }, 
 {
-    question: "Question: String values must be enclosed within ________ when being assigned to variables.",
-    answerChoice: ["A ball of yarn", "My Shoe", "Quotes", "Spider Man's web shooter"],
-    answer: 3
+    question: "String values must be enclosed within ________ when being assigned to variables.",
+    choices: ["A ball of yarn", "My Shoe", "Quotes", "Spider Man's web shooter"],
+    correctAnswer: "Quotes"
 },
 {
-    question: "Question: What team is the BESt NFL team out there?",
-    answerChoice: ["KC Chiefs", "KC Chiefs", "KC CHIEFS", "All of the above"],
-    answer: 4
+    question: "What team is the BESt NFL team out there?",
+    choices: ["KC Chiefs", "KC Chiefs", "KC CHIEFS", "All of the above"],
+    correctAnswer: "All of the above"
 }];
 
-    var score = 0;
+   let currentQuestion = 0;
+let score = 0;
 
-    let i = 0;
+const questionElement = document.getElementById("question");
+const choicesElement = document.getElementById("choices");
+const resultContainer = document.getElementById("result-container");
+const nextButton = document.getElementById("next-button");
 
-    var startBtn = document.getElementById("startBtn");
+function showQuestion() {
+    const question = questions[currentQuestion];
+    questionElement.textContent = question.question;
+    choicesElement.innerHTML = "";
 
-    var time = 75;
-
-    var time_remaining = true;
-
-    var time_start= false;
-
-    var countdownTimer = document.getElementById("countdownTimer");
-
-    var homeContainer =  document.getElementById("homeContainer");
-
-    var quizContainer = document.getElementById("quizContainer");
-
-    var questionHeading = document.getElementById("questionHeading");
-
-    var answerChoiceA = document.getElementById("answerChoiceA");
-
-    var answerChoiceB = document.getElementById("answerChoiceB");
-
-    var answerChoiceC = document.getElementById("answerChoiceC");
-
-    var answerChoiceD = document.getElementById("answerChoiceD");
-
-    var correctAnswer = document.getElementById("correctAnswer");   
-
-    var high_scores= [];
-
-    var output="";
-
-    var countdownTimerInterval = setInterval(setCountdownTimer, 1000);  
-
-    function setCountdownTimer() {
-        if (time_start)
-        time--;
-        if(time<= 0) {
-        end_quiz();
-        time = 0;  
-        }
-
-    document.getElementById("timer").innerHTML = time;}
-
-    startBtn.addEventListener("click", function() {
-        quizContainer.style.display = "block";
-        homeContainer.style.display ="none";
-        countdownTimer.style.display= "block";
-        document.getElementById("score_keeper").style.display= "block";
-        document.getElementById("score").innerHTML = score;
-        setCountdownTimer();
-        setQuizQuestions();
-        time_start= true;});
-
-    function setQuizQuestions() {
-        questionHeading.textContent = questionArray[i].question;
-        answerChoiceA.textContent = questionArray[i].answerChoice[0]; 
-        answerChoiceB.textContent = questionArray[i].answerChoice[1]; 
-        answerChoiceC.textContent = questionArray[i].answerChoice[2]; 
-        answerChoiceD.textContent = questionArray[i].answerChoice[3]; };
-
-    answerChoiceA.addEventListener('click', function(event) {
-        event.stopPropagation();
-        correctAnswer= questionArray[i].correctAnswer;
-        console.log("correctAnswer " + correctAnswer);
-        
-    if (0 === correctAnswer) { 
-         document.getElementById("AnswerResponse").innerHTML = "Nice!";
-         setTimeout(function() {
-         document.getElementById("AnswerResponse").innerHTML = "";
-            },
-            1000 );
-        score++;    
-        document.getElementById("score").innerHTML = score;}
-
-    else {
-        time_remaining -= 5;
-        document.getElementById("AnswerResponse").innerHTML = "Bummer, try again";
-        setTimeout(function() {
-        document.getElementById("AnswerResponse").innerHTML = "";
-             },
-             1000
-            );}
-
-    if (i >= questionArray.length -1) {
-        end_quiz();
-        } 
-
-    else {
-        i++ 
-        setQuizQuestions();};
+    question.choices.forEach(choice => {
+        const button = document.createElement("button");
+        button.textContent = choice;
+        button.addEventListener("click", () => checkAnswer(choice));
+        choicesElement.appendChild(button);
     });
+}
 
-    answerChoiceB.addEventListener('click', function(event) {
-        event.stopPropagation();
-        correctAnswer = questionArray[i].correctAnswer;
-        console.log(correctAnswer);
-
-    if (1 === correctAnswer) { 
-        document.getElementById("AnswerResponse").innerHTML = "Way to Go!";
-        setTimeout(function() {
-        document.getElementById("AnswerResponse").innerHTML = "";
-            },
-            1000
-            );
-            score++;
-            document.getElementById("score").innerHTML = score;
-        }
-
-    else {
-        time_remaining -= 5;
-        document.getElementById("AnswerResponse").innerHTML = "Nope, try again";
-        setTimeout(function() {
-            document.getElementById("AnswerResponse").innerHTML = "";
-            },
-            1000
-             );
-        }
-
-    if (i >= questionArray.length -1) {
-        end_quiz();
-        } 
-
-    else {
-         i++ 
-        setQuizQuestions();};
-
-    });
-
-    answerChoiceC.addEventListener('click', function(event) {
-        event.stopPropagation();
-        correctAnswer = questionArray[i].correctAnswer;
-        console.log(correctAnswer);
-
-    if (2 === correctAnswer) { 
-        document.getElementById("AnswerResponse").innerHTML = "Great job!";
-        setTimeout(function() {
-        document.getElementById("AnswerResponse").innerHTML = "";},
-            1000
-            );
+function checkAnswer(choice) {
+    const question = questions[currentQuestion];
+    if (choice === question.correctAnswer) {
         score++;
-        document.getElementById("score").innerHTML = score;}
-
-    else {
-        time_remaining -= 5;
-        document.getElementById("AnswerResponse").innerHTML = "Better luck next time";
-        setTimeout(function() {
-        document.getElementById("AnswerResponse").innerHTML = "";},
-            1000
-            );
     }
 
-    if (i >= questionArray.length -1) {
-    end_quiz();}
+    currentQuestion++;
 
-     else {i++ 
-        setQuizQuestions();};
-    });
+    if (currentQuestion < questions.length) {
+        showQuestion();
+    } else {
+        showResult();
+    }
+}
 
-    answerChoiceD.addEventListener('click', function(event) {
-         event.stopPropagation();
-        correctAnswer= questionArray[i].correctAnswer.value;
-        console.log(correctAnswer);
+function showResult() {
+    questionElement.textContent = "Quiz Completed!";
+    choicesElement.style.display = "none";
+    resultContainer.textContent = `You scored ${score} out of ${questions.length} questions.`;
+    resultContainer.style.display = "block";
+    nextButton.style.display = "none";
+}
 
-    if (3 === correctAnswer) { 
-        document.getElementById("AnswerResponse").innerHTML = "Correct! Nailed it!";
-        setTimeout(function() {
-            document.getElementById("AnswerResponse").innerHTML = "";},
-            1000
-            );
-        score++;
-        document.getElementById("score").innerHTML = score;} 
-
-    else {
-        time_remaining -= 5;
-        document.getElementById("AnswerResponse").innerHTML = "Nope try again";
-        setTimeout(function() {
-        document.getElementById("AnswerResponse").innerHTML = "";},
-            1000
-            ); }
-
-    if (i >= questionArray.length -1) {
-       end_quiz();} 
-    
-    else { i++ 
-        setQuizQuestions();};
-
+nextButton.addEventListener("click", () => {
+    if (currentQuestion < questions.length) {
+        showQuestion();
+    }
 });
 
-    function end_quiz(){
-        document.getElementById("game_over").style.display= "block";
-        document.getElementById("quizContainer").style.display="none";
-        document.getElementById("countdownTimer").style.display= "none";
-        document.getElementById("score_keeper").style.display= "none";
-        document.getElementById("AnswerResponse").innerHTML="";
-        document.getElementById("end_score").innerHTML= score;
-            }
-
-    function submit_score() {
-        high_scores.push(document.getElementById("initials").value + " " + score);
-        view_high_scores();
-            }
-        
-    function view_high_scores(){
-        
-        document.getElementById("quizContainer").style.display="none";
-        document.getElementById("game_over").style.display= "none";
-        document.getElementById("high_scores_page").style.display="block";
-        
-        output="";
-        for(let k=0; k<high_scores.length; k++){
-        output = output + "  " + high_scores[k];
-            }
-         document.getElementById("high_scores").innerHTML= output;                
-        clear_up();
-        }
-
-    function go_home(){	
-        document.getElementById("high_scores_page").style.display= "none";
-        document.getElementById("homeContainer").style.display= "block";
-        clear_up();
-        }
-        
-    function clear_hs(){
-        high_scores = [];
-            }
-        
-     function clear_up(){
-        
-        time=75;
-        time_remaining=true;
-        time_start=false;
-        i=0;
-        score=0;
-        }
+showQuestion();
